@@ -17,6 +17,11 @@ struct Node {
  */
 void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
+
+    Node *nodeInUse =  new Node;
+    nodeInUse->data = n;
+    nodeInUse-> next = head;
+
 }
 
 /**
@@ -26,6 +31,9 @@ void initNode(struct Node *head, int n) {
  */
 void addNode(struct Node *head, int n) {
   //TODO - Implement this function.
+    Node *addedNode =  new Node;
+    addedNode->data = n;
+    
 }
 
 /**
@@ -35,6 +43,11 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
+//    Node *newNode = new Node();
+//    newNode -> data = n;
+//    newNode -> next = head;
+//    head = newNode;
+
 }
 
 /**
@@ -43,6 +56,14 @@ void insertFront(struct Node **head, int n) {
  */
 void display(struct Node *head) {
   //TODO
+    Node *displayNode = new Node;
+    displayNode = head;
+    while( displayNode !=NULL )
+    {
+        cout << "Node Display: " << displayNode ->data << endl << endl;
+        displayNode =  displayNode->next;
+    }
+
 }
 
 /**
@@ -53,6 +74,18 @@ void display(struct Node *head) {
  */
 struct Node *searchNode(struct Node *head, int n) {
   //TODO
+    Node *targetNode = new Node;
+    targetNode = head;
+
+   int count = 0;
+    while (targetNode != NULL)
+    {
+        if (count == n)
+            return targetNode;
+        count++;
+        targetNode = targetNode->next;
+    }
+
   return NULL;
 }
 
