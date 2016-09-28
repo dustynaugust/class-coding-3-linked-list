@@ -10,6 +10,9 @@ struct Node {
   Node *next;
 };
 
+
+// dustynaugust: test check in.
+
 /**
  * This is only for the 1st Node
  * @param head - pointer to the head of the list
@@ -18,9 +21,6 @@ struct Node {
 void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
 
-//    Node *nodeInUse =  new Node;
-//    nodeInUse->data = n;
-//    head-> next = n;
     head-> data = n;
     head-> next =NULL;
 
@@ -34,8 +34,7 @@ void initNode(struct Node *head, int n) {
  */
 void addNode(struct Node *head, int n) {
   //TODO - Implement this function.
-    Node *addedNode =  new Node;
-    addedNode->data = n;
+   
 
 }
 
