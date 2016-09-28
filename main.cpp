@@ -22,6 +22,8 @@ void initNode(struct Node *head, int n) {
 //    nodeInUse->data = n;
 //    head-> next = n;
     head-> data = n;
+    head-> next =NULL;
+
 
 }
 
@@ -57,12 +59,12 @@ void insertFront(struct Node **head, int n) {
  */
 void display(struct Node *head) {
   //TODO
-    Node *displayNode = new Node;
-    displayNode = head;
-    while( displayNode !=NULL )
+//    Node *displayNode = new Node;
+    head = head;
+    while( head !=NULL )
     {
-        cout << "Node Display: " << displayNode ->data << endl << endl;
-        displayNode =  displayNode->next;
+        cout << "Node Display: " << head ->data << endl << endl;
+        head =  head->next;
     }
 
 }
