@@ -61,10 +61,15 @@ void display(struct Node *head) {
   //TODO
 //    Node *displayNode = new Node;
     head = head;
-    while( head !=NULL )
-    {
-        cout << "Node Display: " << head ->data << endl << endl;
-        head =  head->next;
+//    while( head !=NULL )
+//    {
+//        cout << "Node Display: " << head ->data << endl << endl;
+//        head =  head->next;
+//    }
+    Node *list = head;
+    while (list){
+        cout << list->data << " ";
+        list = list->next;
     }
 
 }
