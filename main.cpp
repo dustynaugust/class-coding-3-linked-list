@@ -45,10 +45,10 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
-//    Node *newNode = new Node();
-//    newNode -> data = n;
-//    newNode -> next = head;
-//    head = newNode;
+   Node *newNode = new Node();
+   newNode->data = n;
+   newNode->next = *head;
+   *head = newNode;
 
 }
 
@@ -184,10 +184,10 @@ int main() {
 
   addNode(head,40);
   display(head);
-
+*/
   insertFront(&head,5);
   display(head);
-
+/*
   int numDel = 5;
   Node *ptrDelete = searchNode(head,numDel);
   if(deleteNode(&head,ptrDelete))
