@@ -10,21 +10,16 @@ struct Node {
   Node *next;
 };
 
-
-// This is a sample comment to demo checkin
-
 /**
  * This is only for the 1st Node
  * @param head - pointer to the head of the list
  * @param n - data that the first element should hold
  */
 void initNode(struct Node *head, int n) {
-  //TODO: Initiliaze the node data to n and the next pointer to..?
 
+  //Initiliaze the node data to n and the next pointer to..?
     head-> data = n;
     head-> next =NULL;
-
-
 }
 
 /**
@@ -44,12 +39,12 @@ void addNode(struct Node *head, int n) {
  * @param n - data that the new node should hold
  */
 void insertFront(struct Node **head, int n) {
-  //TODO
+
+    //Add node at the front
    Node *newNode = new Node();
    newNode->data = n;
    newNode->next = *head;
    *head = newNode;
-
 }
 
 /**
@@ -57,14 +52,7 @@ void insertFront(struct Node **head, int n) {
  * @param head  - pointer to the head of the list
  */
 void display(struct Node *head) {
-  //TODO
-//    Node *displayNode = new Node;
-    head = head;
-//    while( head !=NULL )
-//    {
-//        cout << "Node Display: " << head ->data << endl << endl;
-//        head =  head->next;
-//    }
+
     Node *list = head;
     while (list){
         cout << list->data << " ";
@@ -80,15 +68,13 @@ void display(struct Node *head) {
  * @return - pointer to the node found.
  */
 struct Node *searchNode(struct Node *head, int n) {
-  //TODO
+
     Node *targetNode = head;
 
-   int count = 0;
-    while (targetNode != NULL)
-    {
-        if (count == n)
+    while (targetNode != NULL){
+        if(targetNode-> data == n){
             return targetNode;
-        count++;
+        }
         targetNode = targetNode->next;
     }
 
@@ -169,7 +155,7 @@ int main() {
   struct Node *newHead;
   struct Node *head = new Node;
 
-  /*
+
   initNode(head,10);
   display(head);
 
@@ -184,10 +170,10 @@ int main() {
 
   addNode(head,40);
   display(head);
-*/
+
   insertFront(&head,5);
   display(head);
-/*
+
   int numDel = 5;
   Node *ptrDelete = searchNode(head,numDel);
   if(deleteNode(&head,ptrDelete))
@@ -228,6 +214,6 @@ int main() {
   cout << "Deleting the copied list\n";
   deleteLinkedList(&newHead);
   display(newHead);
-   */
+
   return 0;
 }
