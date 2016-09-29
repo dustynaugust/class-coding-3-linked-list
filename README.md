@@ -18,5 +18,5 @@ ________
 - [X] Implement addNode.
 - [X] Implement insertFront.
 - [X] Implement display
-- [ ] Implement searchNode.
-- [ ] Implement deleteNode.
+- [X] Implement searchNode.
+- [X] Implement deleteNode.
