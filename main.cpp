@@ -11,8 +11,6 @@ struct Node {
 };
 
 
-// dustynaugust: test check in.
-
 /**
  * This is only for the 1st Node
  * @param head - pointer to the head of the list
