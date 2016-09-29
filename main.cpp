@@ -75,9 +75,7 @@ void display(struct Node *head) {
  * @return - pointer to the node found.
  */
 struct Node *searchNode(struct Node *head, int n) {
-
     Node *targetNode = head;
-
     while (targetNode != NULL){
         if(targetNode-> data == n){
             return targetNode;
