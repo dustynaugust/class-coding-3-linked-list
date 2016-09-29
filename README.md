@@ -1,4 +1,6 @@
 # class-coding-3-linked-list
+[![Build Status](https://travis-ci.org/csc340-03-fall-2016/class-coding-3-linked-list.svg?branch=master)](https://travis-ci.org/csc340-03-fall-2016/class-coding-3-linked-list)
+
 Third in class coding for csc340
 _________
 ###  The following users are collaborators and contributed during the in class session:
