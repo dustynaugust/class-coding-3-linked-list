@@ -96,6 +96,8 @@ struct Node *searchNode(struct Node *head, int n) {
  */
 bool deleteNode(struct Node **head, Node *ptrDel) {
   //TODO
+
+
   return false;
 }
 
@@ -187,15 +189,15 @@ int main() {
       cout << "Node "<< numDel << " deleted!\n";
   display(head);
 
-  cout << "The list is reversed\n";
+  cout << endl <<"The list is reversed\n";
   reverse(&head);
   display(head);
 
-  cout << "The list is copied\n";
+  cout << endl << "The list is copied\n";
   copyLinkedList(head,&newHead);
   display(newHead);
 
-  cout << "Comparing the two lists...\n";
+  cout << endl << "Comparing the two lists...\n";
   cout << "Are the two lists same?\n";
   if(compareLinkedList(head,newHead))
       cout << "Yes, they are same!\n";
@@ -203,13 +205,13 @@ int main() {
       cout << "No, they are different!\n";
   cout << endl;
 
-//  numDel = 35;
-//  ptrDelete = searchNode(newHead,numDel);
-//  if(deleteNode(&newHead,ptrDelete)) {
-//      cout << "Node "<< numDel << " deleted!\n";
-//      cout << "The new list after the delete is\n";
-//      display(newHead);
-//  }
+  numDel = 35;
+  ptrDelete = searchNode(newHead,numDel);
+  if(deleteNode(&newHead,ptrDelete)) {
+      cout << "Node "<< numDel << " deleted!\n";
+      cout << "The new list after the delete is\n";
+      display(newHead);
+  }
   cout << "Comparing the two lists again...\n";
   cout << "Are the two lists same?\n";
   if(compareLinkedList(head,newHead))
