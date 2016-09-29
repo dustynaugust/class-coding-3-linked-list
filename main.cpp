@@ -59,29 +59,12 @@ void insertFront(struct Node **head, int n) {
  * @param head  - pointer to the head of the list
  */
 void display(struct Node *head) {
-  //TODO
-//    Node *displayNode = new Node;
-    head = head;
-//    while( head !=NULL )
-//    {
-//        cout << "Node Display: " << head ->data << endl << endl;
-//        head =  head->next;
-//    }
+  cout << "List: ";
     Node *list = head;
     while (list){
         cout << list->data << " ";
         list = list->next;
     }
-
-  struct Node *current = new Node;
-  current = head;
-
-  cout << "List: ";
-
-  while (current!=NULL) {
-    cout << current->data << " ";
-    current = current->next;
-  }
   cout << endl;
 }
 
@@ -220,13 +203,13 @@ int main() {
       cout << "No, they are different!\n";
   cout << endl;
 
-  numDel = 35;
-  ptrDelete = searchNode(newHead,numDel);
-  if(deleteNode(&newHead,ptrDelete)) {
-      cout << "Node "<< numDel << " deleted!\n";
-      cout << "The new list after the delete is\n";
-      display(newHead);
-  }
+//  numDel = 35;
+//  ptrDelete = searchNode(newHead,numDel);
+//  if(deleteNode(&newHead,ptrDelete)) {
+//      cout << "Node "<< numDel << " deleted!\n";
+//      cout << "The new list after the delete is\n";
+//      display(newHead);
+//  }
   cout << "Comparing the two lists again...\n";
   cout << "Are the two lists same?\n";
   if(compareLinkedList(head,newHead))
