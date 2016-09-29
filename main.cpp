@@ -82,7 +82,7 @@ struct Node *searchNode(struct Node *head, int n) {
         if(targetNode-> data == n){
             return targetNode;
         }
-        targetNode = targetNode->next;
+       targetNode = targetNode->next;
     }
 
   return NULL;
@@ -96,8 +96,24 @@ struct Node *searchNode(struct Node *head, int n) {
  */
 bool deleteNode(struct Node **head, Node *ptrDel) {
   //TODO
+  Node *current = *head;
 
+  if(ptrDel == *head) {
+    *head = current->next;
+    ptrDel->next = NULL;
+    delete ptrDel;
+    return true;
+  }
 
+  while (current != NULL) {
+    if(current->next == ptrDel) {
+      current->next= ptrDel->next;
+      ptrDel->next = NULL;
+      delete ptrDel;
+      return true;
+    }
+    current = current->next;
+  }
   return false;
 }
 
@@ -211,6 +227,7 @@ int main() {
       cout << "Node "<< numDel << " deleted!\n";
       cout << "The new list after the delete is\n";
       display(newHead);
+    cout << endl;
   }
   cout << "Comparing the two lists again...\n";
   cout << "Are the two lists same?\n";
