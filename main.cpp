@@ -81,8 +81,7 @@ void display(struct Node *head) {
  */
 struct Node *searchNode(struct Node *head, int n) {
   //TODO
-    Node *targetNode = new Node;
-    targetNode = head;
+    Node *targetNode = head;
 
    int count = 0;
     while (targetNode != NULL)
